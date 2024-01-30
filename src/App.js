@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './index.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Pages/Home';
+import Menu from './Pages/Menu';
+import Banned from './Pages/Banned';
+import Contact from './Pages/Contact';
+import JobListing from './Pages/JobListing';
+import OurHistory from './Pages/OurHistory';
+import { DarkModeProvider } from './Components/DarkModeContex';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DarkModeProvider>
+      <div>
+        <BrowserRouter basename='/LosPollosHermanos'>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path='menu' element={<Menu />} />
+            <Route path='history' element={<OurHistory />} />
+            <Route path='job' element={<JobListing />} />
+            <Route path='banned' element={<Banned />} />
+            <Route path='contact' element={<Contact />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </DarkModeProvider>
   );
-}
+};
 
 export default App;

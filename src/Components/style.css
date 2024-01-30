@@ -1,0 +1,66 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.font-nanum-brush {
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+
+
+.navHover:hover::after, .navHover2:hover::after, .active::after{
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 2px;
+  position: absolute;
+}
+
+.navHover2:hover::after,.active2::after{
+  --tw-text-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-text-opacity));
+}
+
+.navHover:hover::after,.active1::after{
+  --tw-text-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+.active::after{
+  content: "";
+  width: 25px;
+  height: 2px;
+  position: absolute;
+
+}
+.ftr a:hover{
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+.ftr1 a:hover{
+  --tw-text-opacity: 1;
+  color: rgb(250 204 21 / var(--tw-text-opacity));
+}
+
+
+.contact li{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  margin-bottom: 10px;
+  
+
+}
+
+.contact li p{
+  font-size: 14px;
+  margin-left: 10px;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
