@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/LosPollosHermanos/static/css/main.ed401c64.css",
-    "main.js": "/LosPollosHermanos/static/js/main.a9d7db1b.js",
+    "main.css": "/LosPollosHermanos/static/css/main.8b40151a.css",
+    "main.js": "/LosPollosHermanos/static/js/main.a62cbdb6.js",
     "static/js/787.d4aba7ab.chunk.js": "/LosPollosHermanos/static/js/787.d4aba7ab.chunk.js",
     "static/media/item6.png": "/LosPollosHermanos/static/media/item6.7cef361f6fc46e1bf525.png",
     "static/media/item5.png": "/LosPollosHermanos/static/media/item5.eba6c76dcc990cb763ca.png",
@@ -36,12 +36,12 @@
     "static/media/hector.jpeg": "/LosPollosHermanos/static/media/hector.8412dc34909da4b69c35.jpeg",
     "static/media/pay.png": "/LosPollosHermanos/static/media/pay.47ad3e696f50516da1b3.png",
     "index.html": "/LosPollosHermanos/index.html",
-    "main.ed401c64.css.map": "/LosPollosHermanos/static/css/main.ed401c64.css.map",
-    "main.a9d7db1b.js.map": "/LosPollosHermanos/static/js/main.a9d7db1b.js.map",
+    "main.8b40151a.css.map": "/LosPollosHermanos/static/css/main.8b40151a.css.map",
+    "main.a62cbdb6.js.map": "/LosPollosHermanos/static/js/main.a62cbdb6.js.map",
     "787.d4aba7ab.chunk.js.map": "/LosPollosHermanos/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed401c64.css",
-    "static/js/main.a9d7db1b.js"
+    "static/css/main.8b40151a.css",
+    "static/js/main.a62cbdb6.js"
   ]
 }
