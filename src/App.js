@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate  } from 'react-router-dom';
 import Home from './Pages/Home';
 import Menu from './Pages/Menu';
 import Banned from './Pages/Banned';
@@ -21,6 +21,8 @@ const App = () => {
             <Route path='job' element={<JobListing />} />
             <Route path='banned' element={<Banned />} />
             <Route path='contact' element={<Contact />} />
+            
+            <Route path='*' element={<Navigate to='/' />} />
           </Routes>
         </BrowserRouter>
       </div>

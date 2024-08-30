@@ -169,6 +169,10 @@ const MenuComp = () => {
     };
   }, [darkMode]);
 
+  const handleImageLoad = () => {
+    setLoading((prevLoading) => prevLoading - 1 === 0);
+  };
+
 
 
   const filteredData =
@@ -223,7 +227,7 @@ const MenuComp = () => {
           filteredData.map((item) => (
             <div className={`rounded-2xl flex flex-col justify-center items-center py-10 ${darkMode ? 'bg-[#1c1e21]' : 'bg-gray-100 border-2 border-[gray-100]'}`} key={item.id}>
               <div className="h-[100px] mb-14 flex justify-center items-center">
-                <img src={item.image} alt={item.name} className="w-[300px] h-[100px] object-contain" />
+                <img src={item.image} alt={item.name} onLoad={handleImageLoad} className="w-[300px] h-[100px] object-contain" />
               </div>
               <div className={`p-4 text-center w-[280px] border-t-2 flex flex-col justify-center items-center ${darkMode ? 'border-yellow-300' : 'border-red-700'}`}>
                 <h1 className="text-2xl font-bold mb-4">{item.name}</h1>

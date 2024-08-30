@@ -13,6 +13,10 @@ const HistoryPage = () => {
     return () => clearTimeout(delay);
   }, []);
 
+  const handleImageLoad = () => {
+    setLoading((prevLoading) => prevLoading - 1 === 0);
+  };
+
   
   return (
     <div className={`pt-32 flex justify-evenly pb-10 lg:px-10 px-0 items-center flex-col `}>
@@ -66,7 +70,7 @@ const HistoryPage = () => {
                   <p className='font-bold'> Our motto: "Los Pollos Hermanos! Taste the Family!"</p>
                 </div>
 
-                <img src={history2} alt="Los Pollos Hermanos" className='max-w-[500px] h-[350px] hidden lg:block mb-4' />
+                <img src={history2} onLoad={handleImageLoad} alt="Los Pollos Hermanos" className='max-w-[500px] h-[350px] hidden lg:block mb-4' />
 
               </div>
             )

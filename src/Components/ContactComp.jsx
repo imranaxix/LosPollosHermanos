@@ -63,6 +63,10 @@ const ContactComp = () => {
     };
   }, [darkMode]);
 
+  const handleImageLoad = () => {
+    setLoading((prevLoading) => prevLoading - 1 === 0);
+  };
+
 
 
 
@@ -140,7 +144,7 @@ const ContactComp = () => {
             ) : (
               contacts.map((contact) => (
                 <div key={contact.name} className='flex justify-center items-start mb-12'>
-                  <img src={contact.image} className='w-[65px] h-[65px] object-cover mr-4 rounded-full' alt={contact.name} />
+                  <img src={contact.image} onLoad={handleImageLoad} className='w-[65px] h-[65px] object-cover mr-4 rounded-full' alt={contact.name} />
                   <p>
                     <span className='block font-semibold'>{contact.name}</span> {contact.role} <br />
                     Phone: {contact.phone} <br />

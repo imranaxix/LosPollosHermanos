@@ -71,6 +71,10 @@ const BannedToLph = () => {
     };
   }, [darkMode]);
 
+  const handleImageLoad = () => {
+    setLoading((prevLoading) => prevLoading - 1 === 0);
+  };
+
   return (
     <div className='mt-32'>
       <div className="container mx-auto ">
@@ -105,7 +109,7 @@ const BannedToLph = () => {
                     <h1>{ban.name}</h1>
                   </div>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0'>
-                  <img src={ban.image} className='max-w-[400px] h-[250px] lg:max-w-[500px] lg:h-[350px]' alt="" />
+                  <img src={ban.image} onLoad={handleImageLoad} className='max-w-[400px] h-[250px] lg:max-w-[500px] lg:h-[350px]' alt="" />
                   <div className={`flex flex-col items-center justify-center ${darkMode?'text-white':'text-black'}`}>
                   <p>{ban.p1}</p>
                   <br />

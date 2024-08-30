@@ -88,6 +88,10 @@ const Service = () => {
     };
   }, [darkMode]);
 
+  const handleImageLoad = () => {
+    setLoading((prevLoading) => prevLoading - 1 === 0);
+  };
+
   return (
     <div className={`py-20 ${darkMode ? 'bg-[#121315] text-yellow-400' : 'bg-white text-red-700 px-4'}`}>
       <div className='container mx-auto'>
@@ -100,6 +104,7 @@ const Service = () => {
        </div>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-14 md:gap-6 place-items-center '>
+         
          {loading?(
           <>
          <Loader/>
@@ -113,7 +118,7 @@ const Service = () => {
            ( Services.map((service)=>(
               <div className={`rounded-2xl  flex flex-col justify-center items-center  py-4 ${darkMode?'bg-[#1c1e21]': 'bg-[#f7f7f7] border-2 border-[gray-100]'} `}key={service.id} >
                 <div className='h-[100px] mb-14'>
-                  <img src={service.img} alt={service.name} className='max-w-[200px] block mx-auto  '/>
+                  <img src={service.img} alt={service.name} onLoad={handleImageLoad} className='max-w-[200px] block mx-auto  '/>
                 </div>
                 
                 <div className={`p-4 text-center border-t-2 my-4 ${darkMode?'border-yellow-400':'border-red-700'}`}>
